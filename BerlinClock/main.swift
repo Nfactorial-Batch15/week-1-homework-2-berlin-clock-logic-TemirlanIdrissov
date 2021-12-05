@@ -99,9 +99,8 @@ func timeResult() {
     
     guard let hoursCheck = hours, let minutesCheck = minutes, let secondsCheck = seconds  else {return}
     
-    let hoursInt: Int! = Int(hoursCheck)
-    let minutesInt: Int! = Int(minutesCheck)
-    let secondsInt: Int! = Int(secondsCheck)
+    guard let hoursInt = Int(hoursCheck), let minutesInt = Int(hoursCheck), let secondsInt = Int(secondsCheck) else {return}
+    
     print(BerlinClock.getResult(h: hoursInt, m: minutesInt , s: secondsInt))
 }
 
